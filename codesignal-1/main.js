@@ -10,6 +10,7 @@ function solution(numbers) {
         }
     }
     console.log(arr)
+    return arr
 }
 
 

@@ -1,18 +1,26 @@
-
-function solution(numbers) {
-    const arr = []
-
-    for (let i = 0; i < numbers.length - 2; i++){
-        if ((numbers[i] < numbers[i+1] && numbers[i+1] > numbers[i+2]) || (numbers[i] > numbers[i+1] && numbers[i+1] < numbers[i+2])) {
-            arr.push(1)
-        } else {
-            arr.push(0)
+function countingSort(arr) {
+    // Write your code here
+    const frequencyArr = []
+    let counter
+    let index
+    let checkArr = []
+    let prevIndex = 0
+    for (let i = 0; i < 100; i++){
+        counter = 0
+        index = i
+        checkArr = arr.slice(0, i)
+        if (checkArr.indexOf(arr[i]) !== -1){
+            prevIndex = checkArr.indexOf(arr[i])
+            frequencyArr.push[frequencyArr[prevIndex]]
+            continue;
         }
+        while (index !== -1){
+            index = arr.indexOf(arr[i], index + 1)
+            if (index !== -1){
+                counter++
+            }
+        } 
+        frequencyArr.push(counter)
     }
-    console.log(arr)
-    return arr
+    return frequencyArr
 }
-
-
-const arr = [4, 1, 3, 0, 5]
-solution(arr)
